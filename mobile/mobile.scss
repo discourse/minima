@@ -1,0 +1,141 @@
+@import "common/foundation/variables"; // Pulls in Discourse SASS variables
+
+.list-controls .nav-pills>li {
+  border-color: $primary-low;
+  line-height: 1.2;
+}
+
+.list-controls .container #create-topic {
+  font-size: $font-up-1;
+}
+
+.navigation-topics {
+  .topic-list .topic-item-stats {
+    display: flex;
+    align-items: center;
+    .pull-right {
+      margin-left: auto;
+      margin-top: -2px;
+    }
+  }
+}
+
+.mobile-view .mobile-nav {
+  background: transparent;
+  border: 1px solid $primary-low;
+}
+
+.mobile-view .mobile-nav {
+  width: 100%;
+}
+
+.mobile-view .mobile-nav.messages-nav, 
+.mobile-view .mobile-nav.notifications-nav, 
+.mobile-view .mobile-nav.activity-nav, 
+.mobile-view .mobile-nav.preferences-nav {
+  position: relative;
+  top: unset;
+  margin-bottom: 1em;
+}
+
+.topic-list .num.activity a {
+  padding: 0;
+  font-size: $font-down-1;
+}
+
+.topic-list .topic-item-stats .category, 
+.topic-list .topic-item-stats .num, 
+.topic-list .topic-item-stats .last-poster {
+  float: none;
+}
+
+#topic-footer-buttons .topic-notifications-button .reason {
+  display: none;
+}
+
+.select-kit.multi-select .multi-select-header,
+div.ac-wrap {
+  border-color: $primary-low-mid;
+}
+
+.archetype-regular {
+  .topic-item-stats {
+    .pull-right a:not(.post-activity) {
+      display: none;
+    }
+    
+    .badge-wrapper {
+      margin-top: .5em;
+    }
+  }
+  
+}
+.topic-list .num.posts a {
+  padding: 0;
+}
+
+.topic-body .topic-map {
+  margin: 0;
+}
+
+.post-menu-area {
+  margin-bottom: .25em;
+}
+
+.timeline-container.timeline-fullscreen .topic-timeline .timeline-footer-controls button, 
+.timeline-container.timeline-fullscreen .topic-timeline .timeline-footer-controls .btn-group {
+  background: transparent;
+  border: 1px solid $primary-low;
+}
+
+.user-main .about .details {
+  background: $secondary;
+}
+.user-profile-avatar {
+  margin-top: .15em;
+}
+.user-main .about .details img.avatar {
+  width: 30px;
+  height: 30px;
+}
+
+.user-main .about.collapsed-info .details {
+  background: $secondary;
+}
+
+.user-main .about .details .primary .bio {
+  margin-bottom: 1.5em;
+}
+
+.user-main .about .controls span,
+.user-main .about .controls li {
+  margin: 0;
+}
+
+.user-main .about .details {
+  padding: 0;
+}
+
+.user-main .about .details .primary .primary-textual {
+  flex: 1 1 60%
+}
+
+.search-container .search-advanced-sidebar .search-advanced-title.btn {
+  background: transparent;
+}
+
+.search-container .search-advanced .search-info {
+  flex-direction: row;
+  justify-content: left;
+}
+
+.search-container .search-advanced .search-title .bulk-select {
+  display: none;
+}
+
+.search-advanced-title.btn  {
+  border-bottom: 1px solid $primary-low !important; 
+  + .search-advanced-filters {
+    border-top: none;
+  }
+}

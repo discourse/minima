@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700');
+@import url("https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700");
 @import "common/foundation/variables"; // Pulls in Discourse SASS variables
 
 // Global styles
@@ -8,20 +8,20 @@ html {
   font-size: 16px;
 }
 
-.select-kit.combo-box .select-kit-header, 
-input[type="text"], 
-input[type="password"], 
-input[type="datetime"], 
-input[type="datetime-local"], 
-input[type="date"], 
-input[type="month"], 
-input[type="time"], 
-input[type="week"], 
-input[type="number"], 
-input[type="email"], 
-input[type="url"], 
-input[type="search"], 
-input[type="tel"], 
+.select-kit.combo-box .select-kit-header,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
 input[type="color"] {
   border-color: $primary-low-mid;
 }
@@ -57,15 +57,15 @@ tbody {
   line-height: 1;
   .discourse-tag:first-of-type:not(.assigned-to) {
     &:before {
-      content: '#';
-      display: inline-block; 
-      margin-right: .15em;  
+      content: "#";
+      display: inline-block;
+      margin-right: 0.15em;
     }
   }
 }
 
 .badge-notification {
-  padding: 0.27em 0.42em .15em;
+  padding: 0.27em 0.42em 0.15em;
 }
 
 // Header
@@ -94,7 +94,7 @@ tbody {
 .list-controls .combo-box .combo-box-header {
   height: auto;
   line-height: 1.2;
-  padding: .25em .25em .19em .5em;
+  padding: 0.25em 0.25em 0.19em 0.5em;
   border-color: $primary-low;
   color: $primary-high;
   .badge-wrapper {
@@ -111,9 +111,9 @@ tbody {
   top: -18px;
 }
 
-
-.topic-list th, .topic-list td {
-  padding: 1.1em 0 .8em;
+.topic-list th,
+.topic-list td {
+  padding: 1.1em 0 0.8em;
 }
 
 .topic-list .topic-excerpt {
@@ -126,7 +126,7 @@ tbody {
 }
 
 .main-link .link-bottom-line {
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
   &:empty {
     display: none;
   }
@@ -137,20 +137,20 @@ tbody {
     width: 28px;
     height: 28px;
   }
-  
+
   .byline {
-    font-size: .875em;
+    font-size: 0.875em;
     margin-bottom: 5px;
-    a { 
+    a {
       color: $primary-high;
     }
     img {
-      margin-right: .25em;
+      margin-right: 0.25em;
       width: 15px;
       height: 15px;
     }
   }
-  
+
   a.title {
     display: inline-flex;
     font-size: 1.5em;
@@ -158,7 +158,7 @@ tbody {
     line-height: 1.2;
     padding: 0;
     margin-bottom: 5px;
-  }  
+  }
 }
 
 .link-bottom-line {
@@ -169,7 +169,9 @@ tbody {
 a.post-activity {
   display: flex;
   justify-content: flex-end;
-  img {margin-left: .5em;}
+  img {
+    margin-left: 0.5em;
+  }
 }
 
 .topic-list .num a.badge-posts {
@@ -178,7 +180,7 @@ a.post-activity {
 
 span.latest-poster a {
   img {
-    margin-right: .25em;
+    margin-right: 0.25em;
     width: 15px;
     height: 15px;
     margin-top: 4px;
@@ -196,13 +198,13 @@ span.latest-poster a {
 
 .topic-list-item {
   &.visited {
-    opacity: .75;
-  } 
+    opacity: 0.75;
+  }
 }
 
 .topic-statuses {
   .topic-status {
-    font-size: $font-down-1; 
+    font-size: $font-down-1;
   }
   .d-icon-bookmark {
     color: $tertiary;
@@ -213,14 +215,17 @@ span.latest-poster a {
   margin-bottom: 1em;
 }
 
-.timeline-container .topic-timeline .timeline-controls button.toggle-admin-menu {
+.timeline-container
+  .topic-timeline
+  .timeline-controls
+  button.toggle-admin-menu {
   border: none;
-  margin-left: -.5em;
+  margin-left: -0.5em;
 }
 
 .topic-meta-data .post-info a {
   .d-icon {
-    font-size: .8em;
+    font-size: 0.8em;
   }
 }
 
@@ -239,27 +244,28 @@ span.latest-poster a {
 }
 
 @media screen and (min-width: 1160px) {
-  .navigation-topics, .archetype-regular {
+  .navigation-topics,
+  .archetype-regular {
     .topic-list .topic-post-badges .badge-notification {
       top: 0px;
     }
-    
+
     .topic-post-badges {
       position: absolute;
       left: -30px;
       top: 17px;
       .badge-notification.new-posts {
         top: 2px;
-      }  
+      }
       .badge-notification.unread {
         display: none;
-      }  
+      }
     }
   }
 }
 
 .top-title-buttons {
-  display: block; 
+  display: block;
   width: 100%;
   margin-top: 1em;
 }
@@ -304,13 +310,28 @@ span.latest-poster a {
   display: none;
 }
 
+.related-messages-wrapper.suggested-topics-wrapper {
+  .suggested-topics-message,
+  .suggested-topics .suggested-topics-title {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    a {
+      margin-bottom: 0.1em;
+      .d-icon {
+        color: $primary;
+      }
+    }
+  }
+}
+
 .timeline-container .topic-timeline .timeline-footer-controls {
   display: none;
 }
 
 .topic-admin-popup-menu {
   .d-icon {
-    margin-right: .25em;
+    margin-right: 0.25em;
   }
 }
 
@@ -347,7 +368,6 @@ span.latest-poster a {
   }
 }
 
-
 .topic-map .map li {
   &:first-of-type {
     display: none;
@@ -369,7 +389,6 @@ span.latest-poster a {
 .small-action-desc.timegap:after {
   content: "...";
   display: inline;
-  
 }
 
 .small-action .small-action-desc a.trigger-user-card {
@@ -378,12 +397,12 @@ span.latest-poster a {
 
 .small-action .topic-avatar {
   align-self: unset;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 #topic-footer-buttons .pinned-button .reason,
 #topic-footer-buttons .topic-notifications-button .reason {
-  margin-left: .5em;
+  margin-left: 0.5em;
   color: $primary-high;
 }
 
@@ -396,7 +415,7 @@ span.latest-poster a {
   .popup-menu {
     .btn {
       .d-icon {
-        margin-right: .25em;
+        margin-right: 0.25em;
       }
     }
   }
@@ -411,14 +430,14 @@ span.latest-poster a {
   }
 }
 
-
 #topic-title a.edit-topic .d-icon {
-  font-size: .6em;
+  font-size: 0.6em;
   color: $primary-high;
 }
 
 #topic-title h1 {
-  font-size: $font-up-4;
+  font-size: $font-up-5;
+  margin-bottom: 0.5em;
 }
 
 #topic-title h1,
@@ -438,31 +457,31 @@ span.latest-poster a {
 
 .category-list {
   margin-left: 1px;
-  
+
   .category-name {
     font-weight: normal;
     font-size: 1.25em;
   }
-  
+
   td {
-    padding: 1.5em .25em; 
+    padding: 1.5em 0.25em;
   }
-  
+
   thead {
     display: none;
   }
-  
+
   tbody .category h3 {
     font-size: $font-up-3;
   }
-  
+
   .subcategories {
-    font-size: .875em;
+    font-size: 0.875em;
     overflow: hidden;
-    
+
     .subcategory {
       width: 100%;
-      
+
       .badge-wrapper {
         overflow: hidden;
         white-space: normal;
@@ -489,7 +508,7 @@ span.latest-poster a {
   .main-link .top-row {
     font-size: 1.5em;
     line-height: 1.2;
-    margin-bottom: .25em;
+    margin-bottom: 0.25em;
   }
 }
 
@@ -510,14 +529,14 @@ span.latest-poster a {
   }
 }
 
-.select-kit.combo-box.tag-drop .select-kit-row, 
+.select-kit.combo-box.tag-drop .select-kit-row,
 .select-kit.combo-box.group-dropdown .select-kit-row {
   font-weight: normal;
 }
 
 .popup-menu {
   .btn-danger {
-    background: none; 
+    background: none;
     color: $danger;
     .d-icon {
       color: $danger;
@@ -529,7 +548,7 @@ nav.post-controls .post-admin-menu li {
   border: none;
 }
 
-nav.post-controls button.create  {
+nav.post-controls button.create {
   .d-button-label {
     display: none;
   }
@@ -544,7 +563,7 @@ nav.post-controls button.create  {
 }
 
 .select-kit .select-kit-header .d-button-label {
-  margin-left: .25em;
+  margin-left: 0.25em;
 }
 
 .select-kit.combo-box.category-drop .select-kit-row .badge-wrapper {
@@ -567,7 +586,8 @@ span.date-section {
 }
 
 .btn-default {
-  &.btn[disabled], &.btn.disabled {
+  &.btn[disabled],
+  &.btn.disabled {
     background: transparent;
   }
 }
@@ -576,8 +596,7 @@ span.date-section {
   border: 1px solid $tertiary;
 }
 
-
-// Composer 
+// Composer
 
 .open .grippie {
   background: none;
@@ -605,7 +624,8 @@ span.date-section {
   .btn-default {
     border: none !important;
   }
-  .btn:hover, .btn.btn-hover {
+  .btn:hover,
+  .btn.btn-hover {
     background: $primary-medium !important;
     .d-icon {
       color: $primary-low !important;
@@ -614,7 +634,6 @@ span.date-section {
 }
 
 // Menu panels
-
 
 .hamburger-panel .menu-panel {
   max-width: 200px;
@@ -634,13 +653,13 @@ ul.category-links {
   display: none;
 }
 
-
 .modal-header .title h3 {
   font-weight: normal;
-  margin-right: .5em;
+  margin-right: 0.5em;
 }
 
-a.mention, a.mention-group {
+a.mention,
+a.mention-group {
   background: $primary-very-low;
   padding: 2px 6px;
 }
@@ -652,14 +671,10 @@ a.mention, a.mention-group {
 
 .names span.first {
   font-size: 1.1em;
-  
-  a {
-    color: $primary; 
-  }
-}
 
-button.dismiss-read:first-of-type {
-  display: none;
+  a {
+    color: $primary;
+  }
 }
 
 // Search
@@ -670,7 +685,7 @@ button.dismiss-read:first-of-type {
     .search-advanced-filters {
       background: transparent;
       border: 1px solid $primary-low;
-      padding: 0.75em;      
+      padding: 0.75em;
     }
     .search-advanced-title {
       border-bottom: none;
@@ -678,11 +693,11 @@ button.dismiss-read:first-of-type {
   }
 }
 
-// User 
+// User
 
-#user-card .badge-section .user-badge, 
-#user-card .badge-section .more-user-badges, 
-#group-card .badge-section .user-badge, 
+#user-card .badge-section .user-badge,
+#user-card .badge-section .more-user-badges,
+#group-card .badge-section .user-badge,
 #group-card .badge-section .more-user-badges {
   background: transparent;
 }
@@ -692,7 +707,9 @@ button.dismiss-read:first-of-type {
 }
 
 .container.badges {
-  h1 {display: none;}
+  h1 {
+    display: none;
+  }
 }
 
 .badge-groups h3 {
@@ -714,7 +731,7 @@ button.dismiss-read:first-of-type {
 
 .user-stream-item {
   img.avatar {
-    margin-right: .25em;
+    margin-right: 0.25em;
   }
 }
 
@@ -751,7 +768,7 @@ div.bio {
   font-weight: normal;
 }
 
-// Banner 
+// Banner
 
 #banner {
   background: transparent;
@@ -759,7 +776,7 @@ div.bio {
   margin-bottom: 1em;
 }
 
-// Share 
+// Share
 
 #share-link {
   .social-link {
@@ -768,13 +785,13 @@ div.bio {
   .reply-as-new-topic {
     margin-left: 0;
   }
-  
+
   .close-share {
     display: none;
   }
 }
 
-// Misc 
+// Misc
 
 #topic-progress-wrapper .topic-admin-menu-button-container .toggle-admin-menu {
   background: $secondary;

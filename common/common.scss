@@ -406,12 +406,12 @@ span.latest-poster a {
 }
 
 #topic-footer-buttons {
-  .btn {
+  .topic-footer-main-buttons > .btn {
     .d-icon {
       margin-right: 0;
     }
     .d-button-label {
-      display: none;
+      display: none !important;
     }
   }
   .popup-menu {

@@ -402,7 +402,6 @@ span.latest-poster a {
 
 #topic-footer-buttons .pinned-button .reason,
 #topic-footer-buttons .topic-notifications-button .reason {
-  margin-left: 0.5em;
   color: $primary-high;
 }
 
@@ -411,12 +410,27 @@ span.latest-poster a {
     .d-icon {
       margin-right: 0;
     }
+    .d-button-label {
+      display: none;
+    }
   }
   .popup-menu {
     .btn {
       .d-icon {
         margin-right: 0.25em;
       }
+    }
+  }
+}
+
+.widget-button.btn.popup-menu-button.toggle-admin-menu.no-text.btn-icon,
+.widget-button.btn.popup-menu-button.toggle-admin-menu.keyboard-target-admin-menu.no-text.btn-icon {
+  background: transparent;
+  border: 1px solid $primary-low;
+  &:hover {
+    background: $primary-low;
+    .d-icon {
+      color: $primary-high;
     }
   }
 }
@@ -451,6 +465,10 @@ span.latest-poster a {
 
 .post-menu-area {
   margin: 1.5em 0 1.5em 0;
+}
+
+nav.post-controls .actions .create .d-icon {
+  margin-right: 0;
 }
 
 // Category page

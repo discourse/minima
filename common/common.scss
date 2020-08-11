@@ -382,7 +382,7 @@ span.latest-poster a {
 .gap {
   text-transform: unset;
   font-weight: normal;
-  color: var(--primary, $tertiary);
+  color: var(--tertiary, $tertiary);
 }
 
 .small-action-desc.timegap:after {

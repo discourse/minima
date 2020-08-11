@@ -1,7 +1,5 @@
-@import "common/foundation/variables"; // Pulls in Discourse SASS variables
-
 .list-controls .nav-pills>li {
-  border-color: $primary-low;
+  border-color: var(--primary-low, $primary-low);
   line-height: 1.2;
 }
 
@@ -22,7 +20,7 @@
 
 .mobile-view .mobile-nav {
   background: transparent;
-  border: 1px solid $primary-low;
+  border: 1px solid var(--primary-low, $primary-low);
 }
 
 .mobile-view .mobile-nav {
@@ -55,7 +53,7 @@
 
 .select-kit.multi-select .multi-select-header,
 div.ac-wrap {
-  border-color: $primary-low-mid;
+  border-color: var(--primary-low-mid, $primary-low-mid);
 }
 
 .archetype-regular {
@@ -85,11 +83,11 @@ div.ac-wrap {
 .timeline-container.timeline-fullscreen .topic-timeline .timeline-footer-controls button, 
 .timeline-container.timeline-fullscreen .topic-timeline .timeline-footer-controls .btn-group {
   background: transparent;
-  border: 1px solid $primary-low;
+  border: 1px solid var(--primary-low, $primary-low);
 }
 
 .user-main .about .details {
-  background: $secondary;
+  background: var(--secondary, $secondary);
 }
 .user-profile-avatar {
   margin-top: .15em;
@@ -100,7 +98,7 @@ div.ac-wrap {
 }
 
 .user-main .about.collapsed-info .details {
-  background: $secondary;
+  background: var(--secondary, $secondary);
 }
 
 .user-main .about .details .primary .bio {
@@ -134,7 +132,7 @@ div.ac-wrap {
 }
 
 .search-advanced-title.btn  {
-  border-bottom: 1px solid $primary-low !important; 
+  border-bottom: 1px solid var(--primary-low, $primary-low) !important; 
   + .search-advanced-filters {
     border-top: none;
   }

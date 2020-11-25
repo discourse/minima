@@ -7,6 +7,15 @@ html {
   font-size: 16px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Source Serif Pro", serif;
+}
+
 .select-kit.combo-box .select-kit-header,
 input[type="text"],
 input[type="password"],
@@ -22,7 +31,7 @@ input[type="url"],
 input[type="search"],
 input[type="tel"],
 input[type="color"] {
-  border-color: var(--primary-low-mid,$primary-low-mid);
+  border-color: var(--primary-low-mid, $primary-low-mid);
 }
 
 tbody {
@@ -34,7 +43,6 @@ tbody {
   box-sizing: border-box;
   &.bullet {
     display: flex;
-    line-height: 1;
     align-items: center;
     .badge-category-bg {
       border-radius: 50%;
@@ -450,7 +458,6 @@ span.latest-poster a {
 
 #topic-title h1 {
   font-size: $font-up-5;
-  margin-bottom: 0.5em;
 }
 
 #topic-title h1,

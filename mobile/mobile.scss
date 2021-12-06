@@ -1,5 +1,5 @@
-.list-controls .nav-pills>li {
-  border-color: var(--primary-low, $primary-low);
+.list-controls .nav-pills > li {
+  border-color: var(--primary-low);
   line-height: 1.2;
 }
 
@@ -20,16 +20,16 @@
 
 .mobile-view .mobile-nav {
   background: transparent;
-  border: 1px solid var(--primary-low, $primary-low);
+  border: 1px solid var(--primary-low);
 }
 
 .mobile-view .mobile-nav {
   width: 100%;
 }
 
-.mobile-view .mobile-nav.messages-nav, 
-.mobile-view .mobile-nav.notifications-nav, 
-.mobile-view .mobile-nav.activity-nav, 
+.mobile-view .mobile-nav.messages-nav,
+.mobile-view .mobile-nav.notifications-nav,
+.mobile-view .mobile-nav.activity-nav,
 .mobile-view .mobile-nav.preferences-nav {
   position: relative;
   top: unset;
@@ -41,8 +41,8 @@
   font-size: $font-down-1;
 }
 
-.topic-list .topic-item-stats .category, 
-.topic-list .topic-item-stats .num, 
+.topic-list .topic-item-stats .category,
+.topic-list .topic-item-stats .num,
 .topic-list .topic-item-stats .last-poster {
   float: none;
 }
@@ -53,7 +53,7 @@
 
 .select-kit.multi-select .multi-select-header,
 div.ac-wrap {
-  border-color: var(--primary-low-mid, $primary-low-mid);
+  border-color: var(--primary-low-mid);
 }
 
 .archetype-regular {
@@ -61,12 +61,11 @@ div.ac-wrap {
     .pull-right a:not(.post-activity) {
       display: none;
     }
-    
+
     .badge-wrapper {
-      margin-top: .5em;
+      margin-top: 0.5em;
     }
   }
-  
 }
 .topic-list .num.posts a {
   padding: 0;
@@ -77,20 +76,26 @@ div.ac-wrap {
 }
 
 .post-menu-area {
-  margin-bottom: .25em;
+  margin-bottom: 0.25em;
 }
 
-.timeline-container.timeline-fullscreen .topic-timeline .timeline-footer-controls button, 
-.timeline-container.timeline-fullscreen .topic-timeline .timeline-footer-controls .btn-group {
+.timeline-container.timeline-fullscreen
+  .topic-timeline
+  .timeline-footer-controls
+  button,
+.timeline-container.timeline-fullscreen
+  .topic-timeline
+  .timeline-footer-controls
+  .btn-group {
   background: transparent;
-  border: 1px solid var(--primary-low, $primary-low);
+  border: 1px solid var(--primary-low);
 }
 
 .user-main .about .details {
-  background: var(--secondary, $secondary);
+  background: var(--secondary);
 }
 .user-profile-avatar {
-  margin-top: .15em;
+  margin-top: 0.15em;
 }
 .user-main .about .details img.avatar {
   width: 30px;
@@ -98,7 +103,7 @@ div.ac-wrap {
 }
 
 .user-main .about.collapsed-info .details {
-  background: var(--secondary, $secondary);
+  background: var(--secondary);
 }
 
 .user-main .about .details .primary .bio {
@@ -115,7 +120,7 @@ div.ac-wrap {
 }
 
 .user-main .about .details .primary .primary-textual {
-  flex: 1 1 60%
+  flex: 1 1 60%;
 }
 
 .search-container .search-advanced-sidebar .search-advanced-title.btn {
@@ -131,8 +136,8 @@ div.ac-wrap {
   display: none;
 }
 
-.search-advanced-title.btn  {
-  border-bottom: 1px solid var(--primary-low, $primary-low) !important; 
+.search-advanced-title.btn {
+  border-bottom: 1px solid var(--primary-low) !important;
   + .search-advanced-filters {
     border-top: none;
   }

@@ -3,7 +3,8 @@
   "about_url": "https://github.com/awesomerobot/minima/tree/master",
   "license_url": "https://github.com/awesomerobot/minima/blob/master/LICENSE",
   "assets": {
+    "sourceserifpro-reg": "assets/SourceSerifPro-Regular.ttf",
+    "sourceserifpro-bold": "assets/SourceSerifPro-Bold.ttf"
   },
-  "color_schemes": {
-  }
+  "color_schemes": {}
 }

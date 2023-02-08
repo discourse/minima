@@ -1,4 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700");
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url($sourceserifpro-reg);
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url($sourceserifpro-bold);
+  font-weight: bold;
+}
 
 // Global styles
 
@@ -832,4 +841,37 @@ div.bio {
 
 .collection-header h3 {
   display: none;
+}
+
+// Sidebar
+
+.sidebar-wrapper {
+  background: transparent;
+  .has-sidebar-page & {
+    border-right: 1px solid var(--primary-low);
+  }
+
+  --d-sidebar-highlight-color: var(--highlight-low);
+
+  .sidebar-footer-container {
+    background: transparent;
+
+    &:before {
+      background: linear-gradient(
+        to bottom,
+        rgba(var(--secondary-rgb), 0),
+        rgba(var(--secondary-rgb), 1)
+      );
+    }
+  }
+}
+
+// chat
+
+.full-page-chat .chat-full-page-header {
+  border-top: none;
+}
+
+.has-full-page-chat.has-sidebar-page:not(.discourse-sidebar) .full-page-chat {
+  border-left: none;
 }

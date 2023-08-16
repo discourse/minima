@@ -70,7 +70,6 @@ tbody {
 }
 
 .discourse-tags {
-  line-height: 1;
   .discourse-tag:first-of-type:not(.assigned-to) {
     &:before {
       content: "#";
@@ -93,7 +92,7 @@ tbody {
 
 // Navs
 
-.category-breadcrumb {
+.category-breadcrumb .combo-box .combo-box-header {
   font-size: 1.15em;
 }
 
@@ -108,7 +107,7 @@ tbody {
 }
 
 .list-controls .combo-box .combo-box-header {
-  height: auto;
+  height: 100%;
   line-height: 1.2;
   padding: 0.25em 0.25em 0.19em 0.5em;
   border-color: var(--primary-low);
@@ -120,11 +119,13 @@ tbody {
 
 // Topic list
 
-#list-area .show-more.has-topics .alert {
-  padding: 4px 35px 6px 14px;
-}
-#list-area .show-more.has-topics {
-  top: -18px;
+#list-area {
+  .show-more.has-topics .alert {
+    padding: 4px 35px 6px 14px;
+  }
+  .show-more.has-topics {
+    top: -18px;
+  }
 }
 
 .topic-list th,
@@ -231,12 +232,22 @@ span.latest-poster a {
   margin-bottom: 1em;
 }
 
-.timeline-container
-  .topic-timeline
-  .timeline-controls
-  button.toggle-admin-menu {
-  border: none;
-  margin-left: -0.5em;
+.timeline-container {
+  .topic-timeline {
+    .timeline-controls button.toggle-admin-menu {
+      border: none !important; // too specific in core
+      margin-left: -0.5em;
+    }
+    .timeline-scrollarea {
+      border-color: var(--primary-low);
+    }
+
+    .timeline-handle {
+      background: var(--secondary);
+      border: 1px solid var(--primary-medium);
+      margin-left: -0.5px;
+    }
+  }
 }
 
 .topic-meta-data .post-info a {
@@ -321,6 +332,10 @@ span.latest-poster a {
   display: none;
 }
 
+.more-content-wrapper {
+  margin-top: 2em;
+}
+
 .suggested-topics-message,
 .suggested-topics .suggested-topics-title {
   display: none;
@@ -339,6 +354,10 @@ span.latest-poster a {
       }
     }
   }
+}
+
+.more-topics-title {
+  font-size: var(--font-up-2);
 }
 
 .timeline-container .topic-timeline .timeline-footer-controls {
@@ -390,10 +409,21 @@ span.latest-poster a {
   }
 }
 
-.small-action .small-action-desc {
-  text-transform: unset;
-  font-weight: normal;
-  color: var(--primary);
+.small-action {
+  align-items: stretch;
+  .small-action-desc {
+    text-transform: unset;
+    font-weight: normal;
+    color: var(--primary);
+  }
+  .small-action-desc a.trigger-user-card {
+    padding-top: 3px;
+  }
+  .topic-avatar {
+    align-self: unset;
+    font-size: 0.8em;
+    padding-top: 1.5em;
+  }
 }
 
 .gap {
@@ -407,18 +437,21 @@ span.latest-poster a {
   display: inline;
 }
 
-.small-action .small-action-desc a.trigger-user-card {
-  padding-top: 3px;
-}
+#topic-footer-buttons .pinned-button,
+#topic-footer-buttons .topic-notifications-button {
+  .reason {
+    color: var(--primary-high);
+  }
 
-.small-action .topic-avatar {
-  align-self: unset;
-  font-size: 0.8em;
-}
-
-#topic-footer-buttons .pinned-button .reason,
-#topic-footer-buttons .topic-notifications-button .reason {
-  color: var(--primary-high);
+  .btn {
+    &:focus,
+    &:active {
+      .selected-name,
+      .d-icon {
+        color: var(--primary-high);
+      }
+    }
+  }
 }
 
 #topic-footer-buttons {
@@ -460,13 +493,15 @@ span.latest-poster a {
   }
 }
 
-#topic-title a.edit-topic .d-icon {
-  font-size: 0.6em;
-  color: var(--primary-high);
-}
-
-#topic-title h1 {
-  font-size: $font-up-5;
+#topic-title {
+  a.edit-topic .d-icon {
+    font-size: 0.6em;
+    color: var(--primary-high);
+  }
+  h1 {
+    font-size: $font-up-5;
+    margin-bottom: 0.25em;
+  }
 }
 
 #topic-title h1,
@@ -662,6 +697,9 @@ span.date-section {
       color: var(--primary-low) !important;
     }
   }
+  .select-kit.dropdown-select-box .dropdown-select-box-header {
+    border: none;
+  }
 }
 
 // Menu panels
@@ -680,9 +718,25 @@ ul.category-links {
   display: none;
 }
 
-.modal-header .title h3 {
-  font-weight: normal;
-  margin-right: 0.5em;
+.modal-header {
+  flex-wrap: wrap;
+  .title h3 {
+    font-weight: normal;
+    margin-right: 0.5em;
+  }
+}
+
+.modal-title-wrapper {
+  width: 100%;
+}
+
+.modal-inner-container {
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  right: 0.5em;
 }
 
 a.mention,
@@ -858,6 +912,10 @@ div.bio {
       );
     }
   }
+
+  .sidebar-container {
+    border: none;
+  }
 }
 
 // chat
@@ -868,4 +926,22 @@ div.bio {
 
 .has-full-page-chat.has-sidebar-page:not(.discourse-sidebar) .full-page-chat {
   border-left: none;
+}
+
+.chat-composer__wrapper {
+  background: transparent;
+}
+
+.chat-channel-card {
+  background: transparent;
+  border: 1px solid var(--primary-low);
+}
+
+.chat-channel-preview-card {
+  background: none;
+  border: 1px solid var(--primary-low);
+}
+
+.chat-channel-preview-card__description {
+  color: var(--primary-high);
 }

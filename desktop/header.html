@@ -1,5 +1,5 @@
 <script type="text/x-handlebars" data-template-name="list/topic-list-item.raw">
-
+  {{~raw-plugin-outlet name="topic-list-before-columns"}}
 
   {{#if bulkSelectEnabled}}
    <td class="bulk-select">
@@ -9,7 +9,7 @@
 
     <td class='main-link clearfix' colspan="1">
       {{~raw "topic-status" topic=topic}}
-
+      {{~raw-plugin-outlet name="topic-list-before-link"}}
       <span class='link-top-line'>
         {{~raw-plugin-outlet name="topic-list-before-status"}}
         {{~topic-link topic class="raw-link raw-topic-link"}}
@@ -25,6 +25,7 @@
       <div class="link-bottom-line">
         {{~#unless hideCategory~}}
         {{~#unless topic.isPinnedUncategorized~}}
+        {{~raw-plugin-outlet name="topic-list-before-category"}}
         {{~category-link topic.category~}}
         {{/unless}}
         {{/unless}}
@@ -34,10 +35,16 @@
       {{#if expandPinned}}
       {{raw "list/topic-excerpt" topic=topic}}
       {{/if}}
+
+      {{~raw-plugin-outlet name="topic-list-main-link-bottom"}}
     </td>
+
+    {{~raw-plugin-outlet name="topic-list-after-main-link"}}
 
     {{raw "list/posts-count-column" topic=topic}}
     {{raw "list/activity-column" topic=topic class="num" tagName="td"}}
+
+    {{~raw-plugin-outlet name="topic-list-after-columns"}}
 </script>
 
 <script

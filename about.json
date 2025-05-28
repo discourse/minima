@@ -6,5 +6,6 @@
     "sourceserifpro-reg": "assets/SourceSerifPro-Regular.ttf",
     "sourceserifpro-bold": "assets/SourceSerifPro-Bold.ttf"
   },
-  "color_schemes": {}
+  "color_schemes": {},
+  "screenshots": ["screenshots/light.png", "screenshots/dark.png"]
 }

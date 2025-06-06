@@ -314,7 +314,7 @@ span.latest-poster a {
   right: -2px;
 }
 
-@media screen and (min-width: 1160px) {
+@media screen and (width >= 1160px) {
   .navigation-topics,
   .archetype-regular {
     .topic-list .topic-post-badges .badge-notification {
@@ -995,8 +995,8 @@ div.bio {
     &::before {
       background: linear-gradient(
         to bottom,
-        rgba(var(--secondary-rgb), 0),
-        rgba(var(--secondary-rgb), 1)
+        rgb(var(--secondary-rgb), 0),
+        rgb(var(--secondary-rgb), 1)
       );
     }
   }

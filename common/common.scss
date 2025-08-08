@@ -323,8 +323,8 @@ span.latest-poster a {
 
     .topic-post-badges {
       position: absolute;
-      left: -30px;
-      top: 17px;
+      left: -22px;
+      top: 16px;
 
       .badge-notification.new-posts {
         top: 2px;
@@ -547,10 +547,10 @@ span.latest-poster a {
 .topic-footer-main-buttons {
   .btn-default .d-button-label {
     display: none;
+  }
 
-    .fa {
-      margin: 0;
-    }
+  .d-icon {
+    margin: 0;
   }
 }
 
@@ -916,7 +916,6 @@ a.mention-group {
 .stream-topic-title {
   font-size: var(--font-up-2);
   margin-right: 100px;
-  padding-left: 1em;
 }
 
 div.bio {
@@ -1031,4 +1030,8 @@ div.bio {
 
 .chat-channel-preview-card__description {
   color: var(--primary-high);
+}
+
+.more-topics__container .nav {
+  position: relative;
 }
